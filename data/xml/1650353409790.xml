@@ -1,0 +1,38 @@
+<annotation>
+	<folder>images</folder>
+	<filename>1650353409790.png</filename>
+	<path>C:\Users\Wenyan\Desktop\genshen impact\images\1650353409790.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3840</width>
+		<height>2160</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>warrior</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1678</xmin>
+			<ymin>769</ymin>
+			<xmax>2176</xmax>
+			<ymax>1465</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>boss</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2000</xmin>
+			<ymin>725</ymin>
+			<xmax>3423</xmax>
+			<ymax>2066</ymax>
+		</bndbox>
+	</object>
+</annotation>
