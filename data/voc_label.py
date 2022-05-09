@@ -5,17 +5,17 @@ from os import listdir, getcwd
 from os.path import join
 import shutil
 
-if os.path.exists("./txt/"):  # 如果文件存在
-    shutil.rmtree("./txt/")
-    os.makedirs('./txt/')
+if os.path.exists("./Mini-project2-3/data/txt/"):  # 如果文件存在
+    shutil.rmtree("./Mini-project2-3/data/txt/")
+    os.makedirs('./Mini-project2-3/data/txt/')
 else:
-    os.makedirs('./txt/')
+    os.makedirs('./Mini-project2-3/data/txt/')
 
 
 
 sets = ['train', 'test', 'val']
 
-classes = ["warrior","monster","boss"]
+classes = ["character","monster","boss"]
 
 
 def convert(size, box):
@@ -33,8 +33,8 @@ def convert(size, box):
 
 
 def convert_annotation(image_id):
-    in_file = open('./xml/%s.xml' % (image_id))
-    out_file = open('./txt/%s.txt' % (image_id), 'w')
+    in_file = open('./Mini-project2-3/data/xml/%s.xml' % (image_id))
+    out_file = open('./Mini-project2-3/data/txt/%s.txt' % (image_id), 'w')
     tree = ET.parse(in_file)
     root = tree.getroot()
     size = root.find('size')
@@ -57,12 +57,12 @@ def convert_annotation(image_id):
 wd = getcwd()
 print(wd)
 for image_set in sets:
-    os.remove("./"+image_set+".txt")
-    if not os.path.exists('./txt/'):
-        os.makedirs('./txt/')
-    image_ids = open('./ImageSets/%s.txt' % (image_set)).read().strip().split()
+    os.remove("./Mini-project2-3/data/"+image_set+".txt")
+    if not os.path.exists('./Mini-project2-3/data//txt/'):
+        os.makedirs('./Mini-project2-3/data//txt/')
+    image_ids = open('./Mini-project2-3/data/ImageSets/%s.txt' % (image_set)).read().strip().split()
     list_file = open('./%s.txt' % (image_set), 'w')
     for image_id in image_ids:
-        list_file.write('./data/Images/%s.png\n' % (image_id))
+        list_file.write('./Mini-project2-3/data/Images/%s.png\n' % (image_id))
         convert_annotation(image_id)
     list_file.close()

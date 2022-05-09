@@ -2,18 +2,18 @@ import os
 import random
 import shutil
 
-if os.path.exists("./ImageSets/"):  # 如果文件存在
-    shutil.rmtree("./ImageSets/")
-    os.makedirs('./ImageSets/')
+if os.path.exists("./Mini-project2-3/data/ImageSets/"):  # 如果文件存在
+    shutil.rmtree("./Mini-project2-3/data//ImageSets/")
+    os.makedirs('./Mini-project2-3/data//ImageSets/')
 else:
-    os.makedirs('./ImageSets/')
+    os.makedirs('./Mini-project2-3/data//ImageSets/')
 
 
 test_percent = 0.1
 train_percent = 0.8
 val_percent = 0.1
 
-xmlfilepath = './xml'
+xmlfilepath = './Mini-project2-3/data//xml'
 
 total_xml = os.listdir(xmlfilepath)
 
@@ -37,9 +37,9 @@ val_list = list
 
 
 
-ftest = open('./ImageSets/test.txt', 'w')
-ftrain = open('./ImageSets/train.txt', 'w')
-fval = open('./ImageSets/val.txt', 'w')
+ftest = open('./Mini-project2-3/data/ImageSets/test.txt', 'w')
+ftrain = open('./Mini-project2-3/data/ImageSets/train.txt', 'w')
+fval = open('./Mini-project2-3/data/ImageSets/val.txt', 'w')
 
 for i in range(num):
     name = total_xml[i][:-4] + '\n'
