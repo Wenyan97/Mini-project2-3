@@ -1,0 +1,26 @@
+<annotation>
+	<folder>imageset</folder>
+	<filename>1650987767436.png</filename>
+	<path>C:\Users\Wenyan\Desktop\image\imageset\1650987767436.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>character</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>611</xmin>
+			<ymin>425</ymin>
+			<xmax>1354</xmax>
+			<ymax>916</ymax>
+		</bndbox>
+	</object>
+</annotation>
